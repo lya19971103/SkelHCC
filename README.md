@@ -45,27 +45,12 @@ This framework introduces a novel approach to skeleton-based action recognition 
 git clone https://github.com/lya19971103/SkelHCC.git
 cd SkelHCC
 
-# Create a virtual environment (optional but recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
 # Install dependencies
 pip install -r requirements.txt
 ```
 
 ## Quick Start
 
-### Training
-
-```bash
-python train.py --config configs/config.yaml
-```
-
-### Evaluation
-
-```bash
-python eval.py --model_path checkpoint.pth --config configs/config.yaml
-```
 
 ### One-Shot Adaptation
 
@@ -91,14 +76,6 @@ Skeleton sequences should be in the format:
 
 ## Results
 
-Our method achieves competitive performance on standard benchmarks:
-
-| Dataset | One-Shot Acc (%) | Few-Shot Acc (%) |
-|---------|-----------------|-----------------|
-| NTU RGB+D 60 | XX.X | XX.X |
-| NTU RGB+D 120 | XX.X | XX.X |
-
-*(Results to be updated upon publication)*
 
 ## Citation
 
@@ -113,17 +90,7 @@ If you use SkelHCC in your research, please cite:
 }
 ```
 
-## Authors
 
-- [Yanan Liu](https://github.com/lya19971103) - Yunnan University
-- Anqi Zhu
-- Jingmin Zhu
-- Jun Liu
-- Hossein Rahmani
-- Mohammed Bennamoun
-- Farid Boussaid
-- Dan Xu
-- Qiuhong Ke
 
 ## Project Structure
 
@@ -149,40 +116,6 @@ SkelHCC/
 └── README.md
 ```
 
-## Usage Examples
-
-### Basic Training Loop
-
-```python
-from models import SkelHCC
-from data import get_dataloader
-
-# Load model
-model = SkelHCC(config)
-
-# Training
-for epoch in range(num_epochs):
-    for batch in train_loader:
-        loss = model.train_step(batch)
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-```
-
-### One-Shot Inference
-
-```python
-from models import SkelHCC
-
-# Load pre-trained model
-model = SkelHCC.load_from_checkpoint('checkpoint.pth')
-
-# Perform one-shot adaptation
-predictions = model.one_shot_forward(
-    support_skeleton=support_skeleton,
-    query_skeleton=query_skeleton
-)
-```
 
 ## License
 
@@ -206,12 +139,6 @@ We thank the authors and communities of the following projects for their contrib
 - [Shift-GCN](https://github.com/kchengiva/Shift-GCN) - Spatial Temporal Graph Convolutional Networks with Shift Attention
 - [BlockGCN](https://github.com/ZhouYuxuanYX/BlockGCN) - Block Graph Convolutional Networks
 
-### Key Publications
-
-- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.14030) - CLIP
-- [Few-Shot Learning: A Survey](https://arxiv.org/abs/1904.05046)
-- [Skeleton-based Action Recognition with Hierarchical Graph Convolutional Networks](https://arxiv.org/abs/2004.13394)
-- [Hyperbolic Neural Networks](https://arxiv.org/abs/1805.09112)
 
 We also acknowledge the broader skeleton-based action recognition community for their continuous contributions to advancing the field.
 
@@ -221,6 +148,6 @@ This code is provided for research and educational purposes. The project is curr
 
 ---
 
-**Status**: 🚧 Under Development | Expected Release: 2026
+**Status**: 🚧 Coming Soon
 
 For updates and more information, please watch this repository or follow the author on GitHub.

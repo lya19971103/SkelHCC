@@ -11,7 +11,7 @@
 
 ## Overview
 
-**SkelHCC** is an official implementation of the paper *"SkelHCC: A Hyperbolic CLIP-Driven Cache Adaptation Framework for Skeleton-based One-Shot Action Recognition"* presented at **ICML 2026**.
+**SkelHCC** is an official implementation of the paper *"SkelHCC: A Hyperbolic CLIP-Driven Cache Adaptation Framework for Skeleton-based One-Shot Action Recognition"* accepted by **ICML 2026**.
 
 This framework introduces a novel approach to skeleton-based action recognition in the one-shot learning scenario by leveraging hyperbolic geometry and CLIP-based knowledge distillation. Our method achieves superior performance through intelligent cache adaptation mechanisms.
 
@@ -79,7 +79,7 @@ The framework supports skeleton-based action recognition datasets:
 
 - **NTU RGB+D 60**: Large-scale skeleton action recognition dataset
 - **NTU RGB+D 120**: Extended version of NTU RGB+D
-- **Custom Datasets**: Support for custom skeleton-based formats
+- **PKU-MMD**
 
 ### Data Format
 
@@ -89,16 +89,7 @@ Skeleton sequences should be in the format:
   - `J`: Number of joints (e.g., 25 for NTU dataset)
   - `3`: (x, y, z) coordinates
 
-## Results
 
-Our method achieves competitive performance on standard benchmarks:
-
-| Dataset | One-Shot Acc (%) | Few-Shot Acc (%) |
-|---------|-----------------|-----------------|
-| NTU RGB+D 60 | XX.X | XX.X |
-| NTU RGB+D 120 | XX.X | XX.X |
-
-*(Results to be updated upon publication)*
 
 ## Citation
 
@@ -113,17 +104,6 @@ If you use SkelHCC in your research, please cite:
 }
 ```
 
-## Authors
-
-- [Yanan Liu](https://github.com/lya19971103) - Yunnan University
-- Anqi Zhu
-- Jingmin Zhu
-- Jun Liu
-- Hossein Rahmani
-- Mohammed Bennamoun
-- Farid Boussaid
-- Dan Xu
-- Qiuhong Ke
 
 ## Project Structure
 
@@ -149,40 +129,6 @@ SkelHCC/
 └── README.md
 ```
 
-## Usage Examples
-
-### Basic Training Loop
-
-```python
-from models import SkelHCC
-from data import get_dataloader
-
-# Load model
-model = SkelHCC(config)
-
-# Training
-for epoch in range(num_epochs):
-    for batch in train_loader:
-        loss = model.train_step(batch)
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-```
-
-### One-Shot Inference
-
-```python
-from models import SkelHCC
-
-# Load pre-trained model
-model = SkelHCC.load_from_checkpoint('checkpoint.pth')
-
-# Perform one-shot adaptation
-predictions = model.one_shot_forward(
-    support_skeleton=support_skeleton,
-    query_skeleton=query_skeleton
-)
-```
 
 ## License
 
@@ -193,7 +139,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 For questions, issues, or collaborations, please reach out:
 
 - **Email**: [liuyanan@mail.ynu.edu.cn](mailto:liuyanan@mail.ynu.edu.cn)
-- **GitHub Issues**: [Open an issue](https://github.com/lya19971103/SkelHCC/issues)
 
 ## Acknowledgments
 
@@ -204,11 +149,6 @@ We thank the authors of [CLIP](https://github.com/openai/CLIP) and the skeleton 
 - Few-Shot Learning
 - Skeleton-based Action Recognition
 
-## Related Work
-
-- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.14030) - CLIP
-- [Few-Shot Learning: A Survey](https://arxiv.org/abs/1904.05046)
-- [Skeleton-based Action Recognition with Hierarchical Graph Convolutional Networks](https://arxiv.org/abs/2004.13394)
 
 ## Disclaimer
 

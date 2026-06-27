@@ -1,0 +1,50 @@
+# Basic arguments1
+work_dir: 'work_dir/skelhcc_ntu120_base100'
+backbone_path: '/home/user06/SkelHCC/data/ctrgcn_f100r/CTR59_f100r.pt'
+# Processor
+gpus: 5
+device: [5]
+num_epoch: 60
+eval_interval: 60
+
+# Debug
+seed: 5  
+
+# Data
+root: 'data/fsl_100_r/'
+dataloader: 'ntu_120'
+
+few_shot:
+  n_way: 20
+  n_support: 1
+  n_query: 1
+  n_tasks: 80
+  auxiliary_size: 100
+  total_examplar: 20
+
+adapter_args:
+  beta: 5.0
+  alpha: 10.5
+  gamma: 10.5
+  lamda: 10.5
+
+# Model
+model_name: 'skelhcc_adapter'
+prompt_args:
+  use_text_prompt: True
+  n_ctx: 2
+  ctx_init: "a skeleton video for the action of "
+  prompt_depth: 9
+  prompt_type: 4
+lr: 1e-4
+model_args:
+  backbone: 'ctrgcn' #'shift_gcn'
+  num_class: 20
+  local_type: 'bjbp'
+  use_mask_learner: False
+
+# Ablation
+activate_train: True
+test_p: False
+resume: False
+        

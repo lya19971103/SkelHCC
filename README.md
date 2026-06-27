@@ -53,9 +53,6 @@ cd SkelHCC
 
 ### One-Shot Adaptation
 
-```bash
-python one_shot_adapt.py --query_skeleton query_skeleton.npy --support_skeleton support_skeleton.npy
-```
 
 ## Dataset
 
@@ -93,27 +90,6 @@ If you use SkelHCC in your research, please cite:
 
 ## Project Structure
 
-```
-SkelHCC/
-├── configs/
-│   └── config.yaml
-├── data/
-│   ├── loaders.py
-│   └── datasets.py
-├── models/
-│   ├── clip_models.py
-│   ├── hyperbolic_encoder.py
-│   └── cache_adapter.py
-├── utils/
-│   ├── losses.py
-│   ├── metrics.py
-│   └── helpers.py
-├── train.py
-├── eval.py
-├── one_shot_adapt.py
-├── requirements.txt
-└── README.md
-```
 
 
 ## License

@@ -45,8 +45,7 @@ This framework introduces a novel approach to skeleton-based action recognition 
 git clone https://github.com/lya19971103/SkelHCC.git
 cd SkelHCC
 
-# Install dependencies
-pip install -r requirements.txt
+
 ```
 
 ## Quick Start
@@ -126,7 +125,6 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 For questions, issues, or collaborations, please reach out:
 
 - **Email**: [liuyanan@mail.ynu.edu.cn](mailto:liuyanan@mail.ynu.edu.cn)
-- **GitHub Issues**: [Open an issue](https://github.com/lya19971103/SkelHCC/issues)
 
 ## Acknowledgments
 
@@ -142,12 +140,5 @@ We thank the authors and communities of the following projects for their contrib
 
 We also acknowledge the broader skeleton-based action recognition community for their continuous contributions to advancing the field.
 
-## Disclaimer
-
-This code is provided for research and educational purposes. The project is currently under development. More details and pre-trained weights will be released upon official publication.
-
----
-
-**Status**: 🚧 Coming Soon
 
 For updates and more information, please watch this repository or follow the author on GitHub.

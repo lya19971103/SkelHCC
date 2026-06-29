@@ -57,7 +57,7 @@ python main.py --config CONFIG_DIR
 python main.py   --config CONFIG_DIR   --activate_train False   --weights WEIGHTS_DIR
 ```
 
-The skeleton backbone are trained on the base dataset  (followed by the previous public evaluation protocols)
+The skeleton backbone are trained on the base dataset. (datasets are followed by the previous public one-shot evaluation protocols.)
 
 ### Data Format
 

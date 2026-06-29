@@ -44,23 +44,20 @@ This framework introduces a novel approach to skeleton-based action recognition 
 # Clone the repository
 git clone https://github.com/lya19971103/SkelHCC.git
 cd SkelHCC
-
-
 ```
 
 ## Quick Start
 
+```bash
+# Hyperbolic Alignment
 
-### One-Shot Adaptation
+python main.py --config CONFIG_DIR
 
+# SkelHCC One-shot Adapation
+python main.py   --config CONFIG_DIR   --activate_train False   --weights WEIGHTS_DIR
+```
 
-## Dataset
-
-The framework supports skeleton-based action recognition datasets:
-
-- **NTU RGB+D 60**: Large-scale skeleton action recognition dataset
-- **NTU RGB+D 120**: Extended version of NTU RGB+D
-- **PKU-MMD**
+The skeleton backbone are trained on the base dataset  (followed by the previous public evaluation protocols)
 
 ### Data Format
 
@@ -70,8 +67,8 @@ Skeleton sequences should be in the format:
   - `J`: Number of joints (e.g., 25 for NTU dataset)
   - `3`: (x, y, z) coordinates
 
-## Results
 
+We are focusing on the extension version of SkelHCC...
 
 ## Citation
 
@@ -86,10 +83,7 @@ If you use SkelHCC in your research, please cite:
 }
 ```
 
-
-
 ## Project Structure
-
 
 
 ## License
